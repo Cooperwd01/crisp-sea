@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-
 
 /* Temp Colours 
 
@@ -56,6 +53,12 @@ header {
 }
 .brand-text, .nav-link {
   color: var(--main-brand-dark-colour) !important;
+}
+.brand-text {
+  text-decoration: none;
+}
+.brand-text:hover {
+  text-decoration: underline;
 }
 .nav-link:focus-visible {
   outline: 0;
@@ -197,9 +200,9 @@ a.skip-link:focus{
 /* end of Nav toggle */
   
 /* Nav item styles */
-button.navbar-toggler {
+/* button.navbar-toggler {
   margin-top: 8px !important;
-}
+} */
 button.navbar-toggler:focus {
   outline: 2px solid var(--main-brand-dark-colour) !important;
   border-radius: 0px;
@@ -450,10 +453,6 @@ input[type=text], input[type=email], textarea{
   border-radius: 5px;
 }
 @media only screen and (max-width:767px) {
-  /* .banner-img {
-    width: 250px;
-    height: 333px;
-  } */
   p, ul > li {
     font-size: 19px;
   }
@@ -463,7 +462,6 @@ input[type=text], input[type=email], textarea{
   width: 30%;
   display:inline-block;
   margin: 10px;
-  /* margin: 0 auto; */
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-radius: 5px;
 }
@@ -476,57 +474,6 @@ input[type=text], input[type=email], textarea{
   .logo-img {
     width: 100px;
   }
-}
-
-/* contact form */
-.contact-input {
-  border-radius: 3px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  outline:5px solid transparent
-}
-
-.contact-input:focus {
-  border: none;
-  border-radius: 5px;
-  outline: 5px solid var(--main-brand-pop-colour);
-}
-
-.button-img{
-  width: 32px;
-  margin-right: 10px;
-}
-
-.form-wrapper {
-  background-color: var(--main-brand-dark-colour);
-} 
-form h2 {
-  color: #fff;
-  text-shadow: -2px 2px 9px rgba(0, 0, 0, 0.57);
-}
-
-/* credtis */
-.credit-list {
-  list-style:none;
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-
-.credit-list > li {
-  margin-bottom: 10px;
-}
-
-.credit--radio::before {
-  content: "🔈";
-  margin-right: 15px;
-}
-.credit--tv::before {
-  content: "📺";
-  margin-right: 15px;
-}
-.credit--online::before {
-  content: "📱";
-  margin-right: 15px;
-
 }
 
 /* cards */
@@ -557,95 +504,6 @@ form h2 {
 }
 .card-5 {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.slick-track:before,
-.slick-track:after {
-  display: table;
-  content: '';
-}
-.slick-track:after {
-  clear: both;
-}
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-[dir='rtl'] .slick-slide {
-  float: right;
-}
-.slick-slide img {
-  display: block;
-}
-.slick-slide.slick-loading img {
-  display: none;
-}
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-  display: none;
 }
 
 /* accordion */
@@ -696,7 +554,24 @@ span.work-title {
 .accordion-body ul {
   padding-left: 0px;
 }
-/* credit tiles */
-.credit-tiles {
-  width: 100%;
+
+/* Index page */
+.postlist {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.postlist li {
+  margin-bottom: 10px;
+}
+
+.icon-nav {
+  display: flex!important;
+  flex-direction: row;
+  align-items: center;
+}
+
+.svg-container{
+  margin-right: 20px;
+  margin-left: -10px;
 }

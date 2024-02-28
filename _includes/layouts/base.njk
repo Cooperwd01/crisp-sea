@@ -41,9 +41,13 @@
       <div class="container" id="nav-head" name="nav-head">
         <div class="nav-row mt-0">
           <nav class="navbar-fixed-top pl-0 pr-0 mr-0 navbar nav-color navbar-expand-md navbar-dark bd-navbar">
-            <div class="d-flex flex-grow-1">
+            <div class="d-flex flex-grow-1 icon-nav">
+							<div aria-hidden="true" class="svg-container">
+								<svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="cccoil-grad"><stop stop-color="hsl(304, 87%, 47%)" stop-opacity="1" offset="0%"></stop><stop stop-color="hsl(212, 72%, 59%)" stop-opacity="1" offset="100%"></stop></linearGradient></defs><g stroke="url(#cccoil-grad)" fill="none" stroke-linecap="round"><circle r="325" cx="400" cy="400" stroke-width="10" stroke-dasharray="1777 2042" transform="rotate(360, 400, 400)"></circle><circle r="300" cx="400" cy="400" stroke-width="10" stroke-dasharray="1503 1885" transform="rotate(330, 400, 400)"></circle><circle r="275" cx="400" cy="400" stroke-width="10" stroke-dasharray="1253 1728" transform="rotate(300, 400, 400)"></circle><circle r="250" cx="400" cy="400" stroke-width="10" stroke-dasharray="1025 1571" transform="rotate(270, 400, 400)"></circle><circle r="225" cx="400" cy="400" stroke-width="10" stroke-dasharray="820 1414" transform="rotate(240, 400, 400)"></circle><circle r="200" cx="400" cy="400" stroke-width="10" stroke-dasharray="638 1257" transform="rotate(210, 400, 400)"></circle><circle r="175" cx="400" cy="400" stroke-width="10" stroke-dasharray="478 1100" transform="rotate(180, 400, 400)"></circle><circle r="150" cx="400" cy="400" stroke-width="10" stroke-dasharray="342 942" transform="rotate(150, 400, 400)"></circle><circle r="125" cx="400" cy="400" stroke-width="10" stroke-dasharray="228 785" transform="rotate(120, 400, 400)"></circle><circle r="100" cx="400" cy="400" stroke-width="10" stroke-dasharray="137 628" transform="rotate(90, 400, 400)"></circle><circle r="75" cx="400" cy="400" stroke-width="10" stroke-dasharray="68 471" transform="rotate(60, 400, 400)"></circle><circle r="50" cx="400" cy="400" stroke-width="10" stroke-dasharray="23 314" transform="rotate(30, 400, 400)"></circle><circle r="25" cx="400" cy="400" stroke-width="10" stroke-dasharray="0 157"></circle></g></svg>
+							</div>
+						
               <span class="nav-title navbar-brand">
-                <span class="brand-text">{{ metadata.title }}</span> 
+                <a href="/" class="brand-text">{{ metadata.title }}</a>
               </span>
               <div class="w-100 text-end">
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
@@ -82,7 +86,7 @@
         <div class="row row-ftr">
           <div class="col-md-8">
             <h2 class="footer-title">{{ metadata.title }}</h2>
-            <ul class="list-unstyled mt-4">
+            <ul class="list-unstyled mt-2">
 							{%- for entry in collections.all | eleventyNavigation %}
 								<li class="ftr-nav-link"><a class="ftr-underline-animation ftr-link" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 							{%- endfor %}
